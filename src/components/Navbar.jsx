@@ -19,7 +19,7 @@ function Navbar() {
           <Logo />
           <ul className="flex space-x-12">
             <Link href="#">Home</Link>
-            <Link href="#">Shop</Link>
+            <Link href="/shop">Shop</Link>
             <Link href="#">About</Link>
             <Link href="#">Contact</Link>
             <Link href="#">Tools</Link>
