@@ -106,7 +106,7 @@ function MyShopProducts() {
           <Pagination value={1} />
           <Pagination value={2} />
           <Pagination value={3} />
-          <Pagination value={"Next"} />
+          <Pagination value={"Next"} /> 
         </div>
       </div>
     </Container>
