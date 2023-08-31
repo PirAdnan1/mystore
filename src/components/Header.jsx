@@ -6,12 +6,13 @@ import Container from "./Container";
 // assets
 import Phone from "@/assets/Phone";
 import InboxIcon from "@/assets/InboxIcon";
+
 function Header() {
   return (
     <div className="bg-primary">
       <Container>
-        <div className=" px-28 flex py-4 justify-between items-center">
-          <div className="flex items-center space-x-3">
+        <div className="lg:px-28 px-8 md:px-12 flex flex-col space-y-4 md:space-y-0 md:flex-row py-4 justify-center md:justify-between items-center">
+          <div className="flex items-center space-x-2">
             <Phone />
             <p className="text-white leading-normal">
               call us <br /> +923484686517
@@ -24,7 +25,7 @@ function Header() {
             </p>
           </div>
           <div>
-            <button className="bg-secondary text-white px-8 py-3 rounded-lg">
+            <button className="bg-secondary text-white lg:px-8 lg:py-3 px-3 py-2 rounded-lg">
               Become a seller
             </button>
           </div>

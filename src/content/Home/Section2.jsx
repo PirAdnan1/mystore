@@ -21,30 +21,30 @@ function Section2() {
           Find a bright ideal to suit your taste with our great selection of
           products.
         </p>
-        <div className="flex justify-center space-x-24 pt-24">
+        <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-x-24 pt-24 px-8">
           <div className="text-base text-left">
-            <Image src={Lubricant} />
+            <Image src={Lubricant} className="w-[150px] md:w-[243px]" />
             <p>Brake System</p>
             <p>Part Number: 8-97100-344-2</p>
             <p>Shpe: Al Fareed</p>
             <h4 className="font-semibold">Rs. 25,000.00</h4>
           </div>
           <div className="text-base text-left">
-            <Image src={Tire} />
+            <Image src={Tire} className="w-[150px] md:w-[243px]" />
             <p className="pt-6">Brake System</p>
             <p>Part Number: 8-97100-344-2</p>
             <p>Shpe: Al Fareed</p>
             <h4 className="font-semibold">Rs. 25,000.00</h4>
           </div>
           <div className="text-base text-left">
-            <Image src={Cylinder} />
+            <Image src={Cylinder} className="w-[150px] md:w-[243px]" />
             <p className="pt-11">Brake System</p>
             <p>Part Number: 8-97100-344-2</p>
             <p>Shpe: Al Fareed</p>
             <h4 className="font-semibold">Rs. 25,000.00</h4>
           </div>
           <div className="text-base text-left mb-14">
-            <Image src={Nuts} />
+            <Image src={Nuts} className="w-[150px] md:w-[243px]" />
             <p className="pt-11">Brake System</p>
             <p>Part Number: 8-97100-344-2</p>
             <p>Shpe: Al Fareed</p>

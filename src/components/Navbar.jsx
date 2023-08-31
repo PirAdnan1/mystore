@@ -13,9 +13,9 @@ import AddtoCard from "@/assets/AddtoCard";
 
 function Navbar() {
   return (
-    <div className="bg-special text-base font-semibold">
+    <div className="bg-special hidden lg:block text-base font-semibold">
       <Container>
-        <div className="bg-special flex items-center">
+        <div className="bg-special  flex items-center">
           <Logo />
           <ul className="flex space-x-12">
             <Link href="#">Home</Link>

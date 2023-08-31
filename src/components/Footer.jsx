@@ -5,6 +5,7 @@ import Link from "next/link";
 import Logo from "@/assets/Logo";
 
 function Footer() {
+  
   return (
     <div className="flex items-center">
       <Logo />

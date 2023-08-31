@@ -4,10 +4,12 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-function Layout({children}) {
+function Layout({ children }) {
   return (
     <div>
-      <Navbar />
+      <div className="hidden lg:block">
+        <Navbar />
+      </div>
       <main>{children}</main>
       <Footer />
     </div>

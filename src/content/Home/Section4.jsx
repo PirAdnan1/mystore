@@ -14,11 +14,11 @@ import Link from "next/link";
 function Section4() {
   return (
     <Container>
-      <h1 className="text-4xl text-center font-semibold mt-12">Our Blogs</h1>
+      <h1 className="lg:text-4xl text-2xl text-center font-semibold mt-12">Our Blogs</h1>
       <p className="text-[#9F9F9F] text-center">
         Find a bright ideal to suit your taste with our great selection
       </p>
-      <div className="flex justify-center space-x-8 mt-16">
+      <div className="flex px-8 md:px-12 flex-col md:flex-row justify-center space-x-8 mt-16">
         <div className="flex flex-col items-center space-y-2">
           <Image src={EngineOil} width={300} />
           <p className="mt-8">How to change engine oil at home?</p>
