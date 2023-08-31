@@ -13,7 +13,7 @@ import Link from "next/link";
 
 function Section4() {
   return (
-    <Container>
+    <Container> 
       <h1 className="lg:text-4xl text-2xl text-center font-semibold mt-12">Our Blogs</h1>
       <p className="text-[#9F9F9F] text-center">
         Find a bright ideal to suit your taste with our great selection
