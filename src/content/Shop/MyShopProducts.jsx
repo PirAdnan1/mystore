@@ -6,7 +6,7 @@ import ShopProducts from "./ShopProducts";
 import Pagination from "./Pagination";
 
 // Assets
-import OilInRed from "@/assets/OinInred.png";
+import OilInRed from "@/assets/OinInRed.png";
 import OilInGray from "@/assets/OilInGray.png";
 import OilInBlack from "@/assets/OilInBlack.png";
 import TireOne from "@/assets/TireOne.png";
