@@ -14,10 +14,11 @@ module.exports = {
         primary: "#868686",
         secondary: "#4E4B4B",
         special: "#D4D4D4",
-        specialOne: "#D9D9D9"
+        specialOne: "#F5F5F5"
       },
       backgroundImage: (theme) => ({
         "banner": "url(/images/Banner.png)",
+        "Shopbanner": "url(/images/ShopBanner.png)",
       })
     },
   },
