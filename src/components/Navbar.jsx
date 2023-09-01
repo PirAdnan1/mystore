@@ -16,13 +16,14 @@ function Navbar() {
     <div className="bg-special hidden lg:block text-base font-semibold">
       <Container>
         <div className="bg-special  flex items-center">
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
           <ul className="flex space-x-12">
             <Link href="/">Home</Link>
             <Link href="/shop">Shop</Link>
             <Link href="#">About</Link>
             <Link href="#">Contact</Link>
-            <Link href="#">Tools</Link>
             <Link href="#">Tools</Link>
           </ul>
           <div className="flex space-x-12 ml-28">
