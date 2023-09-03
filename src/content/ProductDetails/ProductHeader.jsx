@@ -1,7 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
+// components
+import AddtoCart from "./AddtoCart";
 
 // assest
 import TireImage from "@/assets/TireFour.png";
@@ -9,20 +12,25 @@ import TireOne from "@/assets/TireOne.png";
 import TireTwo from "@/assets/TireTwo.png";
 import TireThree from "@/assets/TireThree.png";
 import TireOnes from "@/assets/TireOne.png";
-
+import ProductInfo from "./ProductInfo";
 
 function ProductHeader() {
+  const [show, setShow] = useState(false);
+  const toggleMenu = () => {
+    setShow(true);
+  };
   return (
     <div>
-        <div className="flex items-center mt-12 ml-24">
-            <span className="mr-4 text-[#9F9F9F]">Home</span>
-            <span className="mr-6 text-lg font-bold">{">"}</span>
-            <span className="mr-5 text-[#9F9F9F]">Shop</span>
-            <span className="mr-6 text-lg font-bold">{">"}</span>
-            <div className="w-0.5 h-6 bg-black mr-9"></div>
-            <span>Tire</span>
-        </div>
-      <div className="flex items-start mt-16 ml-24 space-x-24">
+      <div className="flex items-center mt-12 ml-24">
+        <span className="mr-4 text-[#9F9F9F]">Home</span>
+        <span className="mr-6 text-lg font-bold">{">"}</span>
+        <span className="mr-5 text-[#9F9F9F]">Shop</span>
+        <span className="mr-6 text-lg font-bold">{">"}</span>
+        <div className="w-0.5 h-6 bg-black mr-9"></div>
+        <span>Tire</span>
+      </div>
+
+      <div className="flex flex-col lg:flex-row items-start mt-16 md:ml-24 px-3 md:space-x-24">
         <div className="flex items-center shrink-0 space-x-7">
           <div className="space-y-8">
             <Image
@@ -85,10 +93,17 @@ function ProductHeader() {
             <p className="border-2 shrink-0 px-2 text-base max-w-[123px] rounded-lg py-3 border-[#9F9F9F] flex justify-center items-center">
               <span className="mr-9">-</span>1 <span className="ml-9">+</span>
             </p>
-            <Link href="#" className="text-xl">Add to Cart</Link>
+            <Link href="#" className="text-xl" onClick={toggleMenu}>
+              Add to Cart
+            </Link>
           </div>
           <hr className="bg-[#D9D9D9] py-[1px] mt-14" />
+          <ProductInfo />
         </div>
+      </div>
+      <hr className="bg-[#D9D9D9] w-full py-[1px] mt-10 mx-auto" />
+      <div>
+        <AddtoCart />
       </div>
     </div>
   );

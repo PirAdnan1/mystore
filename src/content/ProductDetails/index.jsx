@@ -3,13 +3,13 @@ import React from "react";
 // components
 import Layout from "@/layout/Layout";
 import ProductHeader from "./ProductHeader";
-import SocilaDetails from "./SocilaDetails";
+import ProdDescription from "./ProdDescription";
 
 function ProductDetails() {
   return (
     <Layout>
       <ProductHeader />
-      <SocilaDetails />
+      <ProdDescription />
     </Layout>
   );
 }
