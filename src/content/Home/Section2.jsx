@@ -26,7 +26,7 @@ function Section2({ products }) {
             return (
               <div className="text-base text-left" key={index}>
                 <li key={product.id}>
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.title}
                     width={200}
