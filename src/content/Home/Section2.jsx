@@ -55,7 +55,9 @@ function Section2({ products }) {
                     height={20}
                   />
 
-                  <p className="font-semibold">{product.title.slice(0, 10)}...</p>
+                  <p className="font-semibold">
+                    {product.title.slice(0, 10)}...
+                  </p>
                   <p>{product.description.slice(0, 10)}...</p>
                   <p>{product.category}</p>
                   <h4 className="font-semibold">Rs. {product.price}</h4>
@@ -64,21 +66,21 @@ function Section2({ products }) {
             })}
           </div>
         )}
-        {products.length < visibleProducts ? (
-          <a
-            className="border-b-2 border-black pb-2 font-semibold cursor-pointer"
-            onClick={handleClick}
-          >
-            View More
-          </a>
-        ) : (
+        {/* {products.length < visibleProducts ? ( */}
+        <a
+          className="border-b-2 border-black pb-2 font-semibold cursor-pointer"
+          onClick={handleClick}
+        >
+          View More
+        </a>
+        {/* ) : (
           <a
             className="border-b-2 border-black pb-2 font-semibold cursor-pointer"
             onClick={handleClick}
           >
             View less
-          </a>
-        )}
+          </a> */}
+        {/* )} */}
       </div>
     </Container>
   );
