@@ -65,21 +65,21 @@ function Section2({ products }) {
             })}
           </div>
         )}
-        {products.length < visibleProducts ? (
-          <a
-            className="border-b-2 border-black pb-2 font-semibold cursor-pointer"
-            onClick={handleClick}
-          >
-            View More
-          </a>
-        ) : (
+        {/* {products.length < visibleProducts ? ( */}
+        <a
+          className="border-b-2 border-black pb-2 font-semibold cursor-pointer"
+          onClick={handleClick}
+        >
+          View More
+        </a>
+        {/* ) : (
           <a
             className="border-b-2 border-black pb-2 font-semibold cursor-pointer"
             onClick={handleClick}
           >
             View less
-          </a>
-        )}
+          </a> */}
+        {/* )} */}
       </div>
     </Container>
   );
