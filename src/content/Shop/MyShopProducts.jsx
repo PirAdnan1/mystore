@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 // components
 import Container from "@/components/Container";
@@ -21,11 +22,13 @@ function MyShopProducts() {
     <Container>
       <div>
         <div className="grid md:grid-cols-3 mt-16 lg:grid-cols-4 items-center justify-items-center lg:gap-9 gap-3 space-y-7">
+          <Link href="/productdetails">
           <ShopProducts
             productImage={OilInRed}
             productDetails={`Shell Engile Oil Shope: Oil house`}
             productPrice={"Rs. 25,000.00"}
           />
+          </Link>
           <ShopProducts
             productImage={OilInGray}
             productDetails={`Shell Engile Oil Shope: Oil house`}
