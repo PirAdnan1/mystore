@@ -15,10 +15,10 @@ import TireOnes from "@/assets/TireOne.png";
 import ProductInfo from "./ProductInfo";
 
 function ProductHeader() {
-  const [show, setShow] = useState(false);
-  const toggleMenu = () => {
-    setShow(true);
-  };
+  const [item, setItem] = useState(false);
+
+  const toggleMenu = () => setItem(!item);
+
   return (
     <div>
       <div className="flex items-center mt-12 ml-24">
@@ -103,7 +103,7 @@ function ProductHeader() {
       </div>
       <hr className="bg-[#D9D9D9] w-full py-[1px] mt-10 mx-auto" />
       <div>
-        <AddtoCart />
+        <AddtoCart show={item} toggleMenu={toggleMenu} />
       </div>
     </div>
   );
