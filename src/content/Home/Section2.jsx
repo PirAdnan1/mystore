@@ -5,12 +5,6 @@ import Link from "next/link";
 // components
 import Container from "@/components/Container";
 
-// assets
-import Lubricant from "@/assets/Lubricant.png";
-import Tire from "@/assets/Tire.png";
-import Cylinder from "@/assets/Cylinder.png";
-import Nuts from "@/assets/Nuts.png";
-
 function Section2({ products }) {
   console.log(products, "product");
   return (
@@ -21,55 +15,28 @@ function Section2({ products }) {
           Find a bright ideal to suit your taste with our great selection of
           products.
         </p>
-        <div className="grid lg:grid-cols-4 justify-items-start items-center space-y-8 gap-0 pt-24 px-8 mb-16">
+        <div className="grid lg:grid-cols-4 justify-items-center items-center space-y-8 gap-0 pt-24 px-8 mb-16">
           {products.map((product, index) => {
             return (
-              <div className="text-base text-left max-h-[700px]" key={index}>
+              <>
+              <div className="text-base text-left" key={index}>
                 <div key={product.id}>
-                  <img
+                  <Image
+                  className="w-[214px] h-[251px]"
                     src={product.image}
                     alt={product.title}
                     width={200}
                     height={200}
                   />
-                  {/* {product.title} - ${product.price} */}
                 </div>
-                {/* <Image src={product.image} width={42} height={42} alt="data" /> */}
                 <p>Brake System</p>
                 <p>Part Number: 8-97100-344-2</p>
                 <p>Shpe: Al Fareed</p>
-                <h4 className="font-semibold">{product.price}</h4>
+                <h4 className="font-semibold">Rs: {product.price}</h4>
               </div>
+              </>
             );
           })}
-
-          {/* <div className="text-base text-left">
-            <Image src={Tire} />
-            <div className="mt-6">
-              <p>Brake System</p>
-              <p>Part Number: 8-97100-344-2</p>
-              <p>Shpe: Al Fareed</p>
-              <h4 className="font-semibold">Rs. 25,000.00</h4>
-            </div>
-          </div>
-          <div className="text-base text-left">
-            <Image src={Cylinder} />
-            <div className="mt-6">
-              <p>Brake System</p>
-              <p>Part Number: 8-97100-344-2</p>
-              <p>Shpe: Al Fareed</p>
-              <h4 className="font-semibold">Rs. 25,000.00</h4>
-            </div>
-          </div>
-          <div className="text-base text-left">
-            <Image src={Nuts} />
-            <div className="mt-6">
-              <p>Brake System</p>
-              <p>Part Number: 8-97100-344-2</p>
-              <p>Shpe: Al Fareed</p>
-              <h4 className="font-semibold">Rs. 25,000.00</h4>
-            </div>
-          </div> */}
         </div>
         <Link href="#" className="border-b-2 border-black pb-2 font-semibold">
           View More
