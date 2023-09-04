@@ -3,7 +3,8 @@ import Head from 'next/head'
 // components
 import HomeContents from '@/content/Home'
 
-export default function Home() {
+export default function Home({ products }) {
+
   return (
     <>
       <Head>
@@ -12,7 +13,23 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    <HomeContents />
+      <HomeContents products={products} />
     </>
   )
+}
+
+
+export async function getServerSideProps() {
+
+  const response = await fetch('https://fakestoreapi.com/products');
+
+  const products = await response.json();
+
+  return {
+    props: {
+      products,
+    },
+  };
+
+
 }

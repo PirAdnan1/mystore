@@ -38,8 +38,10 @@ function Footer() {
           </div>
         </div>
       </div>
-        <hr className="py-[1px] bg-[#D9D9D9] max-w-[1240.015px] mx-auto" />
-        <p className="text-base font-normal py-6 text-center">2023-24 autoessentials. All rights reverved</p>
+      <hr className="py-[1px] bg-[#D9D9D9] max-w-[1240.015px] mx-auto" />
+      <p className="text-base font-normal py-6 text-center">
+        2023-24 autoessentials. All rights reverved
+      </p>
     </div>
   );
 }
