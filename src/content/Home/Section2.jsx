@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 // components
 import Container from "@/components/Container";
@@ -22,7 +21,7 @@ function Section2({ products }) {
           Find a bright ideal to suit your taste with our great selection of
           products.
         </p>
-        <div className="grid lg:grid-cols-4 justify-items-center items-center space-y-8 gap-0 pt-24 px-8 mb-16">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 justify-items-center items-center space-y-8 gap-0 pt-24 px-8 mb-16">
           {products.slice(0, visibleProducts).map((product, index) => {
             return (
               <div className="text-base text-left " key={index}>
@@ -37,7 +36,7 @@ function Section2({ products }) {
                 <p className="font-semibold">{product.title.slice(0, 10)}...</p>
                 <p>{product.description.slice(0, 10)}...</p>
                 <p>{product.category}</p>
-                <h4 className="font-semibold">Rs. {product.price}</h4>
+                <h4 className="font-semibold">Rs: {product.price}</h4>
               </div>
             );
           })}
@@ -55,10 +54,12 @@ function Section2({ products }) {
                     height={20}
                   />
 
-                  <p className="font-semibold">{product.title.slice(0, 10)}...</p>
+                  <p className="font-semibold">
+                    {product.title.slice(0, 10)}...
+                  </p>
                   <p>{product.description.slice(0, 10)}...</p>
                   <p>{product.category}</p>
-                  <h4 className="font-semibold">Rs. {product.price}</h4>
+                  <h4 className="font-semibold">Rs: {product.price}</h4>
                 </div>
               );
             })}

@@ -7,9 +7,9 @@ import Logo from "@/assets/Logo";
 function Footer() {
   return (
     <div>
-      <div className="grid md:grid-cols-3 grid-cols-1 text-base font-medium items-center justify-items-center md:gap-28 pt-24 px-12 justify-center">
+      <div className="grid md:grid-cols-3 grid-cols-1 text-base font-medium items-center justify-items-center lg:gap-28 md:gap-5 pt-24 px-12 justify-center">
         <Logo />
-        <div className="flex flex-col items-start md:flex-row space-y-10 md:space-y-0 md:gap-24 md:ml-32 mb-4">
+        <div className="flex flex-col items-start md:flex-row space-y-10 md:space-y-0 lg:gap-24 gap-10 md:ml-32 mb-4">
           <div className="flex flex-col space-y-12">
             <h1 className="text-[#9F9F9F]">Links</h1>
             <Link href="#">Home</Link>
