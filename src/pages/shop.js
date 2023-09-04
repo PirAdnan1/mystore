@@ -6,9 +6,10 @@ import ShopContents from '@/content/Shop'
 function shop() {
   return (
     <div>
-        <ShopContents />
+      <ShopContents />
     </div>
   )
 }
 
 export default shop
+

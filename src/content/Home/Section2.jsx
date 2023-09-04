@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,6 +13,17 @@ import Nuts from "@/assets/Nuts.png";
 
 function Section2({ products }) {
   console.log(products, "product");
+
+  const [show, setShow] = useState(false);
+  const [visibleProducts, setVisibleProducts] = useState(8);
+
+  // const loadMore = () => {
+  //   setVisibleProducts(visibleProducts + 12); // Increase the number of visible products
+  // };
+
+  const handleClick = () => {
+    setShow(!show);
+  };
   return (
     <Container>
       <div className="text-center pt-28">
@@ -22,19 +33,18 @@ function Section2({ products }) {
           products.
         </p>
         <div className="grid lg:grid-cols-4 justify-items-center items-center space-y-8 gap-0 pt-24 px-8 mb-16">
-          {products.map((product, index) => {
+          {products.slice(0, visibleProducts).map((product, index) => {
             return (
-              <div className="text-base text-left" key={index}>
-                <li key={product.id}>
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    width={200}
-                    height={200}
-                  />
-                  {/* {product.title} - ${product.price} */}
-                </li>
-                {/* <Image src={product.image} width={42} height={42} alt="data" /> */}
+              <div className="text-base text-left " key={index}>
+                {/* <li  key={product.id}> */}
+                <Image
+                  className=" h-[250px] "
+                  src={product.image}
+                  alt={product.title}
+                  width={214}
+                  height={20}
+                />
+
                 <p>Brake System</p>
                 <p>Part Number: 8-97100-344-2</p>
                 <p>Shpe: Al Fareed</p>
@@ -42,38 +52,52 @@ function Section2({ products }) {
               </div>
             );
           })}
-
-          {/* <div className="text-base text-left">
-            <Image src={Tire} />
-            <div className="mt-6">
-              <p>Brake System</p>
-              <p>Part Number: 8-97100-344-2</p>
-              <p>Shpe: Al Fareed</p>
-              <h4 className="font-semibold">Rs. 25,000.00</h4>
-            </div>
-          </div>
-          <div className="text-base text-left">
-            <Image src={Cylinder} />
-            <div className="mt-6">
-              <p>Brake System</p>
-              <p>Part Number: 8-97100-344-2</p>
-              <p>Shpe: Al Fareed</p>
-              <h4 className="font-semibold">Rs. 25,000.00</h4>
-            </div>
-          </div>
-          <div className="text-base text-left">
-            <Image src={Nuts} />
-            <div className="mt-6">
-              <p>Brake System</p>
-              <p>Part Number: 8-97100-344-2</p>
-              <p>Shpe: Al Fareed</p>
-              <h4 className="font-semibold">Rs. 25,000.00</h4>
-            </div>
-          </div> */}
         </div>
-        <Link href="#" className="border-b-2 border-black pb-2 font-semibold">
+        {show && (
+          <div className="grid lg:grid-cols-4 justify-items-center items-center space-y-8 gap-0 pt-24 px-8 mb-16">
+            {products.slice(8, 20).map((product, index) => {
+              return (
+                <div className="text-base text-left " key={index}>
+                  {/* <li  key={product.id}> */}
+                  <Image
+                    className=" h-[250px] "
+                    src={product.image}
+                    alt={product.title}
+                    width={214}
+                    height={20}
+                  />
+
+                  <p>Brake System</p>
+                  <p>Part Number: 8-97100-344-2</p>
+                  <p>Shpe: Al Fareed</p>
+                  <h4 className="font-semibold">Rs. {product.price}</h4>
+                </div>
+              );
+            })}
+          </div>
+        )}
+        {products.length < visibleProducts ? (
+          <a
+            className="border-b-2 border-black pb-2 font-semibold"
+            onClick={handleClick}
+          >
+            View More
+          </a>
+        ) : (
+          <a
+            className="border-b-2 border-black pb-2 font-semibold"
+            onClick={handleClick}
+          >
+            View less
+          </a>
+        )}
+
+        {/* <a
+          className="border-b-2 border-black pb-2 font-semibold"
+          onClick={handleClick}
+        >
           View More
-        </Link>
+        </a> */}
       </div>
     </Container>
   );
