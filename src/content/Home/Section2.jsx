@@ -11,7 +11,8 @@ import Tire from "@/assets/Tire.png";
 import Cylinder from "@/assets/Cylinder.png";
 import Nuts from "@/assets/Nuts.png";
 
-function Section2() {
+function Section2({ products }) {
+  console.log(products, "product");
   return (
     <Container>
       <div className="text-center pt-28">
@@ -20,15 +21,29 @@ function Section2() {
           Find a bright ideal to suit your taste with our great selection of
           products.
         </p>
-        <div className="grid lg:grid-cols-4 justify-items-center items-center space-y-8 gap-0 pt-24 px-8 mb-16">
-          <div className="text-base text-left">
-            <Image src={Lubricant} />
-            <p>Brake System</p>
-            <p>Part Number: 8-97100-344-2</p>
-            <p>Shpe: Al Fareed</p>
-            <h4 className="font-semibold">Rs. 25,000.00</h4>
-          </div>
-          <div className="text-base text-left">
+        <div className="grid lg:grid-cols-4 justify-items-start items-center space-y-8 gap-0 pt-24 px-8 mb-16">
+          {products.map((product, index) => {
+            return (
+              <div className="text-base text-left max-h-[700px]" key={index}>
+                <div key={product.id}>
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    width={200}
+                    height={200}
+                  />
+                  {/* {product.title} - ${product.price} */}
+                </div>
+                {/* <Image src={product.image} width={42} height={42} alt="data" /> */}
+                <p>Brake System</p>
+                <p>Part Number: 8-97100-344-2</p>
+                <p>Shpe: Al Fareed</p>
+                <h4 className="font-semibold">{product.price}</h4>
+              </div>
+            );
+          })}
+
+          {/* <div className="text-base text-left">
             <Image src={Tire} />
             <div className="mt-6">
               <p>Brake System</p>
@@ -54,7 +69,7 @@ function Section2() {
               <p>Shpe: Al Fareed</p>
               <h4 className="font-semibold">Rs. 25,000.00</h4>
             </div>
-          </div>
+          </div> */}
         </div>
         <Link href="#" className="border-b-2 border-black pb-2 font-semibold">
           View More
