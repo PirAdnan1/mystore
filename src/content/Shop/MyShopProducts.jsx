@@ -1,115 +1,49 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // components
 import Container from "@/components/Container";
-import ShopProducts from "./ShopProducts";
 import Pagination from "./Pagination";
 
-// Assets
-import OilInRed from "@/assets/OilInRed.png";
-import OilInGray from "@/assets/OilInGray.png";
-import OilInBlack from "@/assets/OilInBlack.png";
-import TireOne from "@/assets/TireOne.png";
-import TireTwo from "@/assets/TireTwo.png";
-import TireThree from "@/assets/TireThree.png";
-import TireFour from "@/assets/TireFour.png";
-import FilterOne from "@/assets/FilterOne.png";
-import FilterTwo from "@/assets/FilterTwo.png";
+// const filldata = Array(16).fill({
+//   productImage: OilInRed,
+//   productPrice: "Rs. 25,000.00",
+//   productDetails: "Shell Engine Oil Shop: Oil house",
+// });
 
-function MyShopProducts() {
+function MyShopProducts({ products }) {
   return (
     <Container>
       <div>
-        <div className="grid md:grid-cols-3 mt-16 lg:grid-cols-4 items-center justify-items-center lg:gap-9 gap-3 space-y-7">
+        <div className="">
           <Link href="/productdetails">
-          <ShopProducts
-            productImage={OilInRed}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-28 mt-20 grid-cols-1 px-24 justify-center items-center">
+              {products.map((product, index) => {
+                return (
+                  <div className="" key={index}>
+                    <Image
+                      src={product.image}
+                      className="w-[214px] h-[254px]"
+                      alt="products"
+                      width={214}
+                      height={214}
+                    />
+                    <p className="max-w-[160px] mt-2">{product.title.slice(0, 30)}...</p>
+                    <div className="max-w-xs">
+                      <p className="font-bold truncate">Rs: {product.price}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </Link>
-          <ShopProducts
-            productImage={OilInGray}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 15,000.00"}
-          />
-          <ShopProducts
-            productImage={OilInBlack}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={OilInRed}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={OilInGray}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 15,000.00"}
-          />
-          <ShopProducts
-            productImage={OilInBlack}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={OilInRed}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={OilInBlack}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={TireOne}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={TireTwo}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={TireThree}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={TireFour}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={FilterOne}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={FilterTwo}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={FilterOne}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
-          <ShopProducts
-            productImage={FilterTwo}
-            productDetails={`Shell Engile Oil Shope: Oil house`}
-            productPrice={"Rs. 25,000.00"}
-          />
         </div>
         <div className="flex justify-center items-center md:gap-10 gap-3 mt-28">
           <Pagination value={1} />
           <Pagination value={2} />
           <Pagination value={3} />
-          <Pagination value={"Next"} /> 
+          <Pagination value={"Next"} />
         </div>
       </div>
     </Container>

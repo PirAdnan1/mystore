@@ -9,12 +9,12 @@ import Pagination from "./Pagination";
 import Information from "./Information";
 
 
-function ShopContents() {
+function ShopContents({products}) {
   return (
     <Layout>
       <ShopHero />
       <ShopDetails />
-      <MyShopProducts />
+      <MyShopProducts products={products} />
       <Information />
     </Layout>
   );

@@ -3,12 +3,29 @@ import React from 'react'
 // components
 import ShopContents from '@/content/Shop'
 
-function shop() {
+function shop({products}) {
   return (
     <div>
-        <ShopContents />
+      <ShopContents products={products} />
     </div>
   )
 }
 
+
+export async function getServerSideProps() {
+
+  const response = await fetch('https://fakestoreapi.com/products');
+
+  const products = await response.json();
+
+  return {
+    props: {
+      products,
+    },
+  };
+
+
+}
+
 export default shop
+
