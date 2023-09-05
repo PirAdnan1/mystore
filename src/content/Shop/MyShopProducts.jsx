@@ -17,11 +17,12 @@ function MyShopProducts({ products }) {
     <Container>
       <div>
         <div className="">
-          <Link href="/productdetails">
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-28 mt-20 grid-cols-1 px-24 justify-center items-center">
-              {products.map((product, index) => {
-                return (
-                  <div className="" key={index}>
+          {/* <Link href="/productdetails"> */}
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-28 mt-20 grid-cols-1 px-24 justify-center items-center">
+            {products.map((product, index) => {
+              return (
+                <Link key={index} href={`/product/${product.id}`}>
+                  <div className="">
                     <Image
                       src={product.image}
                       className="w-[214px] h-[254px]"
@@ -29,15 +30,17 @@ function MyShopProducts({ products }) {
                       width={214}
                       height={214}
                     />
-                    <p className="max-w-[160px] mt-2">{product.title.slice(0, 30)}...</p>
+                    <p className="max-w-[160px] mt-2">
+                      {product.title.slice(0, 30)}...
+                    </p>
                     <div className="max-w-xs">
                       <p className="font-bold truncate">Rs: {product.price}</p>
                     </div>
                   </div>
-                );
-              })}
-            </div>
-          </Link>
+                </Link>
+              );
+            })}
+          </div>
         </div>
         <div className="flex justify-center items-center md:gap-10 gap-3 mt-28">
           <Pagination value={1} />

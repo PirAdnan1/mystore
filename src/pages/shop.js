@@ -1,9 +1,12 @@
 import React from 'react'
 
+
 // components
 import ShopContents from '@/content/Shop'
 
-function shop({products}) {
+function Shop({ products }) {
+
+
   return (
     <div>
       <ShopContents products={products} />
@@ -12,9 +15,11 @@ function shop({products}) {
 }
 
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ params }) {
 
-  const response = await fetch('https://fakestoreapi.com/products');
+  // const { id } = params;
+
+  const response = await fetch(`https://fakestoreapi.com/products`);
 
   const products = await response.json();
 
@@ -27,5 +32,5 @@ export async function getServerSideProps() {
 
 }
 
-export default shop
+export default Shop
 

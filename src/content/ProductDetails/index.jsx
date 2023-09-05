@@ -5,11 +5,11 @@ import Layout from "@/layout/Layout";
 import ProductHeader from "./ProductHeader";
 import ProdDescription from "./ProdDescription";
 
-function ProductDetails() {
+function ProductDetails({ products }) {
   return (
     <Layout>
-      <ProductHeader />
-      <ProdDescription />
+      <ProductHeader products={products} />
+      <ProdDescription products={products} />
     </Layout>
   );
 }

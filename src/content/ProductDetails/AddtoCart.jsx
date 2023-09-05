@@ -6,7 +6,7 @@ import CloseBox from "@/assets/CloseBox";
 import ProductOne from "@/assets/Tire.png";
 import Close from "@/assets/Close";
 
-function AddtoCart({ show, toggleMenu }) {
+function AddtoCart({ show, toggleMenu, products, count }) {
   return (
     <>
       {show && (
@@ -19,18 +19,20 @@ function AddtoCart({ show, toggleMenu }) {
             <hr className="py-[1px] bg-[#D9D9D9] max-w-[346px] mt-7" />
             <div className="flex items-center gap-6 mt-11">
               <Image
-                src={ProductOne}
+                src={products.image}
                 width={100}
+                height={100}
+                alt="image"
                 className="bg-[#D9D9D9] px-5 py-2 rounded-lg "
               />
               <div className="flex flex-col ">
-                <p>MIRAGE MR-AT172 285/65</p>
+                <p>{products.title}</p>
 
                 <div className="flex items-center">
                   <p className="text-base">
-                    1 <span className="mx-4">X</span>
+                    {count} <span className="mx-4">X</span>
                   </p>
-                  <p className="text-[#B88E2F] text-xs">Rs. 250,000.00</p>
+                  <p className="text-[#B88E2F] text-xs">Rs. {products.price}</p>
                 </div>
               </div>
               <div>
