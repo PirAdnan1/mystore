@@ -70,9 +70,9 @@ function ProductHeader({ products }) {
               alt="product"
             />
           </div>
-          <div className="bg-[#e6e6e6] flex items-center justify-center w-full max-w-[423px] max-h-[500px] h-full">
+          <div className="flex items-center justify-center w-full max-w-[423px] max-h-[500px] h-full">
             <Image
-              className="py-16"
+              className="object-cover"
               src={products.image}
               width={280}
               height={280}
@@ -112,11 +112,11 @@ function ProductHeader({ products }) {
 
           <div className="mt-8 flex items-center space-x-16">
             <p className="border-2 shrink-0 px-2 text-base max-w-[123px] rounded-lg py-3 border-[#9F9F9F] flex justify-center items-center">
-              <span className="mr-9" onClick={Decrease}>
+              <span className="mr-9 cursor-pointer" onClick={Decrease}>
                 -
               </span>
               {count}
-              <span className="ml-9" onClick={Increase}>
+              <span className="ml-9 cursor-pointer" onClick={Increase}>
                 +
               </span>
             </p>
@@ -125,7 +125,7 @@ function ProductHeader({ products }) {
             </Link>
           </div>
           <hr className="bg-[#D9D9D9] py-[1px] mt-14" />
-          <ProductInfo />
+          <ProductInfo products={products} />
         </div>
       </div>
       <hr className="bg-[#D9D9D9] w-full py-[1px] mt-10 mx-auto" />

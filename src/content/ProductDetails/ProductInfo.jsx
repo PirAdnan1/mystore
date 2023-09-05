@@ -5,8 +5,7 @@ import Facebook from "@/assets/Facebook";
 import Linkedin from "@/assets/Linkedin";
 import Twitter from "@/assets/Twitter";
 
-
-function ProductInfo() {
+function ProductInfo({ products }) {
   return (
     <div className="mt-10 space-y-3">
       <div className="flex items-center space-x-4">
@@ -17,7 +16,7 @@ function ProductInfo() {
       <div className="flex space-x-4">
         <span>Category</span>
         <span className="mr-3 ml-4">:</span>
-        <span>Tire</span>
+        <span>{products.category}</span>
       </div>
       <div className="flex space-x-4">
         <span>Tags</span>
@@ -28,9 +27,9 @@ function ProductInfo() {
         <span>Share</span>
         <span className="mr-3 ml-4">:</span>
         <div className="flex items-center space-x-2">
-            <Facebook />
-            <Linkedin />
-            <Twitter />
+          <Facebook />
+          <Linkedin />
+          <Twitter />
         </div>
       </div>
     </div>

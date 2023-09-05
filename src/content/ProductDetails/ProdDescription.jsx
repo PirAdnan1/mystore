@@ -20,14 +20,14 @@ function ProdDescription({ products }) {
       </p>
       <div className="flex flex-col md:flex-row gap-4 mt-11 items-center justify-center">
         <Image
-          className="bg-[#e6e6e6] rounded-lg px-20"
+          className="bg-[#e6e6e6] rounded-lg  object-fill "
           src={products.image}
           width={350}
           height={350}
           alt="descriptionimage"
         />
         <Image
-          className="bg-[#e6e6e6] rounded-lg px-20 "
+          className="bg-[#e6e6e6] rounded-lg  "
           src={products.image}
           width={350}
           height={350}
