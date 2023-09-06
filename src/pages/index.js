@@ -1,9 +1,19 @@
 import Head from 'next/head'
 
+import { useRouter } from 'next/router';
+
 // components
 import HomeContents from '@/content/Home'
 
+import { useEffect } from 'react';
+
+
+
 export default function Home({ products }) {
+
+
+
+
 
   return (
     <>
@@ -13,6 +23,7 @@ export default function Home({ products }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <HomeContents products={products} />
     </>
   )

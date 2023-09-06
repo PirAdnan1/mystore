@@ -30,12 +30,17 @@ function ProductHeader({ products }) {
   return (
     <div>
       <div className="flex items-center mt-12 ml-24">
-        <span className="mr-4 text-[#9F9F9F]">Home</span>
+        <Link href="/" className="mr-4 text-[#9F9F9F]">
+          Home
+        </Link>
         <span className="mr-6 text-lg font-bold">{">"}</span>
-        <span className="mr-5 text-[#9F9F9F]">Shop</span>
+        <Link href="/shop" className="mr-5 text-[#9F9F9F]">
+          Shop
+        </Link>
         <span className="mr-6 text-lg font-bold">{">"}</span>
         <div className="w-0.5 h-6 bg-black mr-9"></div>
-        <span>Tire</span>
+
+        <span>{products.category}</span>
       </div>
 
       <div className="flex flex-col lg:flex-row items-start mt-16 md:ml-24 px-3 md:space-x-24">

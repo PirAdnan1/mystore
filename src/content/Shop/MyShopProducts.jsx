@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,20 +6,29 @@ import Image from "next/image";
 import Container from "@/components/Container";
 import Pagination from "./Pagination";
 
-// const filldata = Array(16).fill({
-//   productImage: OilInRed,
-//   productPrice: "Rs. 25,000.00",
-//   productDetails: "Shell Engine Oil Shop: Oil house",
-// });
-
 function MyShopProducts({ products }) {
+  const [searchText, setSearchText] = useState("");
+
+  const filtercoin = products.filter((item) => {
+    return item.title.toLowerCase().includes(searchText.toLowerCase());
+  });
   return (
     <Container>
       <div>
+        <div className="flex justify-center items-start border-1 border-blue-300 py-4">
+          <input
+            className="py-1 px-3 rounded-lg"
+            type="text"
+            placeholder="search"
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+        </div>
         <div className="">
           {/* <Link href="/productdetails"> */}
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-28 mt-20 grid-cols-1 px-24 justify-center items-center">
-            {products.map((product, index) => {
+            {filtercoin.map((product, index) => {
               return (
                 <Link key={index} href={`/product/${product.id}`}>
                   <div className="">

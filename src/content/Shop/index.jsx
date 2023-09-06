@@ -8,12 +8,11 @@ import MyShopProducts from "./MyShopProducts";
 import Pagination from "./Pagination";
 import Information from "./Information";
 
-
-function ShopContents({products}) {
+function ShopContents({ products }) {
   return (
     <Layout>
       <ShopHero />
-      <ShopDetails />
+      <ShopDetails products={products} />
       <MyShopProducts products={products} />
       <Information />
     </Layout>

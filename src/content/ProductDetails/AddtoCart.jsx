@@ -23,7 +23,7 @@ function AddtoCart({ show, toggleMenu, products, count }) {
                 width={100}
                 height={100}
                 alt="image"
-                className="bg-[#D9D9D9] px-5 py-2 rounded-lg "
+                className="bg-[#D9D9D9]  rounded-lg "
               />
               <div className="flex flex-col ">
                 <p>{products.title}</p>
