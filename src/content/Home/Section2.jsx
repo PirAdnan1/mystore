@@ -34,7 +34,7 @@ function Section2({ products }) {
                 />
 
                 <p className="font-semibold">{product.title.slice(0, 10)}...</p>
-                <p>{product.description.slice(0, 10)}...</p>
+                <p>{product.description.slice(0, 4)}...</p>
                 <p>{product.category}</p>
                 <h4 className="font-semibold">Rs: {product.price}</h4>
               </div>
