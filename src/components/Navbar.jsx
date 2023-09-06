@@ -23,7 +23,7 @@ function Navbar() {
             <Link href="/">Home</Link>
             <Link href="/shop">Shop</Link>
             <Link href="#">About</Link>
-            <Link href="#">Contact</Link>
+            <Link href="/contact">Contact</Link>
             <Link href="#">Tools</Link>
           </ul>
           <div className="flex space-x-12 ml-28">

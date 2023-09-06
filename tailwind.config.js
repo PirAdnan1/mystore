@@ -19,6 +19,7 @@ module.exports = {
       backgroundImage: (theme) => ({
         "banner": "url(/images/Banner.png)",
         "Shopbanner": "url(/images/ShopBanner.png)",
+        "ContactBanner": "url(/images/contact.png)",
       })
     },
   },
