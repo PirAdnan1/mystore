@@ -16,7 +16,7 @@ function ProductInfo({ products }) {
       <div className="flex space-x-4">
         <span>Category</span>
         <span className="mr-3 ml-4">:</span>
-        <span>{products.category}</span>
+        <span>{products?.category}</span>
       </div>
       <div className="flex space-x-4">
         <span>Tags</span>
