@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // components
 import Container from "@/components/Container";
@@ -17,9 +18,9 @@ function Hero() {
               Auto <span className="text-black">Spare Parts</span>
             </h1>
             <p className="text-xl font-semibold">All Major Brand Available</p>
-            <a className="bg-primary px-3 py-2 text-white rounded-lg" href="/shop">
+            <Link className="bg-primary px-3 py-2 text-white rounded-lg" href="/shop">
               Shop Now
-            </a>
+            </Link>
           </div>
           <div>
             <Image src={HeroImage} className="w-[220px] md:w-[536px]" />
