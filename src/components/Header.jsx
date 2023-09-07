@@ -25,7 +25,7 @@ function Header() {
             </p>
           </div>
           <div>
-            <button className="bg-secondary text-white lg:px-8 lg:py-3 px-3 py-2 rounded-lg">
+            <button className="bg-secondary text-specialOne hover:text-primary hover:bg-white lg:px-8 lg:py-3 px-3 py-2 rounded-lg">
               Become a seller
             </button>
           </div>
