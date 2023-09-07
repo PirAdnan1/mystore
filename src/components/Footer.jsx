@@ -15,16 +15,16 @@ function Footer() {
         <div className="flex flex-col items-start md:flex-row space-y-10 md:space-y-0 lg:gap-24 gap-10 md:ml-32 mb-4">
           <div className="flex flex-col space-y-12">
             <h1 className="text-[#9F9F9F]">Links</h1>
-            <Link href="#">Home</Link>
-            <Link href="#">Shop</Link>
-            <Link href="#">About</Link>
-            <Link href="#">Contact</Link>
+            <Link href="#" className="hover:text-primary">Home</Link>
+            <Link href="#" className="hover:text-primary">Shop</Link>
+            <Link href="#" className="hover:text-primary">About</Link>
+            <Link href="#" className="hover:text-primary">Contact</Link>
           </div>
           <div className="flex flex-col space-y-12">
             <h1 className="text-[#9F9F9F]">Help</h1>
-            <Link href="#">Payment Options</Link>
-            <Link href="#">Returns</Link>
-            <Link href="#">Privacy Policy</Link>
+            <Link href="#" className="hover:text-primary">Payment Options</Link>
+            <Link href="#" className="hover:text-primary">Returns</Link>
+            <Link href="#" className="hover:text-primary">Privacy Policy</Link>
           </div>
           <div className="flex flex-col items-center justify-center space-y-12">
             <h1 className="text-[#9F9F9F]">Newa Letters</h1>
