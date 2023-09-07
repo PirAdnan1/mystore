@@ -7,7 +7,7 @@ import Delete from "@/assets/Delete";
 
 function ProductDetails() {
   return ( 
-    <div className="flex flex-col lg:flex-row lg:items-start items-center justify-center gap-20 mt-16">
+    <div className="flex flex-col lg:flex-row lg:items-start items-center justify-center xl:gap-20 lg:gap-3 mt-16">
       <div>
         <ul className="flex font-medium md:space-x-32 space-x-8 bg-[#FFF9E5] justify-end pr-10 py-4">
           <li>Product</li>

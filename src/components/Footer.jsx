@@ -1,12 +1,15 @@
 import React from "react";
 import Link from "next/link";
 
+// components
+import Container from "./Container";
+
 // assets
 import Logo from "@/assets/Logo";
 
 function Footer() {
   return (
-    <div>
+    <Container>
       <div className="grid md:grid-cols-3 grid-cols-1 text-base font-medium items-center justify-items-center lg:gap-28 md:gap-5 pt-24 px-12 justify-center">
         <Logo />
         <div className="flex flex-col items-start md:flex-row space-y-10 md:space-y-0 lg:gap-24 gap-10 md:ml-32 mb-4">
@@ -42,7 +45,7 @@ function Footer() {
       <p className="text-base font-normal py-6 text-center">
         2023-24 autoessentials. All rights reverved
       </p>
-    </div>
+    </Container>
   );
 }
 

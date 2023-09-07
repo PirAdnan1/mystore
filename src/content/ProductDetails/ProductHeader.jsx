@@ -5,13 +5,6 @@ import { useState } from "react";
 
 // components
 import AddtoCart from "./AddtoCart";
-
-// assest
-import TireImage from "@/assets/TireFour.png";
-import TireOne from "@/assets/TireOne.png";
-import TireTwo from "@/assets/TireTwo.png";
-import TireThree from "@/assets/TireThree.png";
-import TireOnes from "@/assets/TireOne.png";
 import ProductInfo from "./ProductInfo";
 
 function ProductHeader({ products }) {
@@ -40,7 +33,7 @@ function ProductHeader({ products }) {
         <span className="mr-6 text-lg font-bold">{">"}</span>
         <div className="w-0.5 h-6 bg-black mr-9"></div>
 
-        <span>{products.category}</span>
+        <span>{products?.category}</span>
       </div>
 
       <div className="flex flex-col lg:flex-row items-start mt-16 md:ml-24 px-3 md:space-x-24">
@@ -90,7 +83,7 @@ function ProductHeader({ products }) {
           <h1 className="text-[42px] font-normal">{products.title}</h1>
           <p className="text-[#9F9F9F] text-2xl">{products.price}</p>
           <div className="flex items-center mt-4">
-            <span className="text-black">Shope: {products.category}</span>
+            <span className="text-black">Shope: {products?.category}</span>
             <div className="w-0.5 h-6 bg-[#9F9F9F] mr-3 ml-2" />
             <span className="text-[#9F9F9F] text-xs">
               Rating : {products.rating.rate}{" "}
