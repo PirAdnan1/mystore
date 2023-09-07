@@ -28,13 +28,13 @@ function Footer() {
           </div>
           <div className="flex flex-col items-center justify-center space-y-12">
             <h1 className="text-[#9F9F9F]">Newa Letters</h1>
-            <div className="flex flex-col space-y-6 md:flex-row space-x-4">
+            <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row space-x-4">
               <input
                 type="text"
                 className="border-0 border-b-2 border-black outline-none focus:outline-none"
                 placeholder="Enter Your Email Address"
               />
-              <button className="md:border-b-2 bg-primary md:pb-2 md:bg-white py-3 md:py-0 rounded-lg md:rounded-none text-white md:text-black uppercase md:border-b-black">
+              <button className="md:border-b-2 bg-primary hover:text-primary md:bg-white py-3 md:py-0 rounded-lg md:rounded-none text-white md:text-black uppercase md:border-b-black">
                 Subscribe
               </button>
             </div>
