@@ -1,9 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-// assest
-import TireImage1 from "@/assets/TireThree.png";
-import TireImage2 from "@/assets/TireOne.png";
 
 function ProdDescription({ products }) {
   return (
