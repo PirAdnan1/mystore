@@ -45,7 +45,7 @@ function ProductHeader({ products }) {
 
       <div className="flex flex-col lg:flex-row items-start mt-16 md:ml-24 px-3 md:space-x-24">
         <div className="flex items-center shrink-0 space-x-7">
-          <div className="space-y-8">
+          <div className="space-y-4">
             <Image
               alt="product"
               className="bg-[#e6e6e6] flex justify-center items-center rounded-lg"

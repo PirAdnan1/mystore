@@ -20,6 +20,7 @@ module.exports = {
         "banner": "url(/images/Banner.png)",
         "Shopbanner": "url(/images/ShopBanner.png)",
         "ContactBanner": "url(/images/contact.png)",
+        "CartBanner": "url(/images/CartBanner.png)",
       })
     },
   },

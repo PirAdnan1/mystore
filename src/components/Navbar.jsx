@@ -30,7 +30,9 @@ function Navbar() {
             <User />
             <Search />
             <LoveIcon />
-            <AddtoCard />
+            <Link href="/cart">
+              <AddtoCard />
+            </Link>
           </div>
         </div>
       </Container>

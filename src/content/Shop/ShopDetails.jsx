@@ -9,21 +9,6 @@ import Grid from "@/assets/Grid";
 import Vector from "@/assets/Vector";
 
 function ShopDetails({ products }) {
-  // console.log(products);
-  // const [searchValue, setSearchValue] = useState("");
-  // const [filteredItems, setFilteredItems] = useState(products);
-
-  // const handleSearchChange = (e) => {
-  //   const searchTerm = e.target.value.toLowerCase();
-
-  //   // Filter items based on the search term
-  //   const filtered = products.filter((item) =>
-  //     item.category.toLowerCase().includes(searchTerm)
-  //   );
-
-  //   setSearchValue(e.target.value);
-  //   setFilteredItems(filtered);
-  // };
   return (
     <div className="bg-special">
       <Container>
@@ -48,24 +33,11 @@ function ShopDetails({ products }) {
             <div className="flex items-center gap-4">
               <span>Sort by</span>
               <div className="bg-white flex items-center justify-center py-3 px-4 rounded-lg">
-                {/* {products.map((item, index) => ( */}
+          
                 <span className="flex flex-col  ">Default</span>
-                {/* ))} */}
+       
               </div>
             </div>
-            {/* <div>
-              <input
-                type="text"
-                placeholder="Search..."
-                value={searchValue}
-                onChange={handleSearchChange}
-              />
-              <ul>
-                {filteredItems.map((item) => (
-                  <li key={item.id}>{item.category}</li>
-                ))}
-              </ul>
-            </div> */}
           </div>
         </div>
       </Container>

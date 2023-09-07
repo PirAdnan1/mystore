@@ -15,10 +15,12 @@ function MyShopProducts({ products }) {
   return (
     <Container>
       <div>
-        <div className="flex justify-center items-start border-1 border-blue-300 py-4">
+        <div className="flex flex-col md:flex-row justify-end mt-5 gap-2 items-center mr-4">
+          <label className="font-semibold md:text-lg text-base" htmlFor="names">Search by Name:</label>
           <input
-            className="py-1 px-3 rounded-lg"
+            className="py-1 px-3 rounded-l border rounded-lg border-black border-blackg outline-none"
             type="text"
+            id="names"
             placeholder="search"
             onChange={(e) => {
               setSearchText(e.target.value);

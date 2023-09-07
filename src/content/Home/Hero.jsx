@@ -17,9 +17,9 @@ function Hero() {
               Auto <span className="text-black">Spare Parts</span>
             </h1>
             <p className="text-xl font-semibold">All Major Brand Available</p>
-            <button className="bg-primary px-3 py-2 text-white rounded-lg">
+            <a className="bg-primary px-3 py-2 text-white rounded-lg" href="/shop">
               Shop Now
-            </button>
+            </a>
           </div>
           <div>
             <Image src={HeroImage} className="w-[220px] md:w-[536px]" />

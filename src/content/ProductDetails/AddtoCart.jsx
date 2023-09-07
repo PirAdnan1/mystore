@@ -3,7 +3,6 @@ import Image from "next/image";
 
 // assets
 import CloseBox from "@/assets/CloseBox";
-import ProductOne from "@/assets/Tire.png";
 import Close from "@/assets/Close";
 
 function AddtoCart({ show, toggleMenu, products, count }) {
@@ -45,10 +44,10 @@ function AddtoCart({ show, toggleMenu, products, count }) {
             </div>
             <hr className="py-[1px] bg-[#D9D9D9] mt-6" />
             <div className="my-4 flex items-center justify-center md:gap-7 gap-3">
-              <button className="border-2 px-9 py-2 border-black whitespace-nowrap rounded-full">
+              <button className="border-2 px-9 py-2 border-black hover:border-primary whitespace-nowrap rounded-full hover:bg-primary hover:text-white">
                 View Cart
               </button>
-              <button className="border-2 px-9 py-2 border-black rounded-full">
+              <button className="border-2 px-9 py-2 border-black hover:border-primary rounded-full hover:bg-primary hover:text-white">
                 Checkout
               </button>
             </div>
