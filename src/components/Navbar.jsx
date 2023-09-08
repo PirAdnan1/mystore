@@ -20,14 +20,26 @@ function Navbar() {
             <Logo />
           </Link>
           <ul className="flex space-x-12 ">
-            <Link href="/" className="hover:text-primary">Home</Link>
-            <Link href="/shop" className="hover:text-primary">Shop</Link>
-            <Link href="#" className="hover:text-primary">About</Link>
-            <Link href="/contact" className="hover:text-primary">Contact</Link>
-            <Link href="#" className="hover:text-primary">Tools</Link>
+            <Link href="/" className="hover:text-primary">
+              Home
+            </Link>
+            <Link href="/shop" className="hover:text-primary">
+              Shop
+            </Link>
+            <Link href="#" className="hover:text-primary">
+              About
+            </Link>
+            <Link href="/contact" className="hover:text-primary">
+              Contact
+            </Link>
+            <Link href="#" className="hover:text-primary">
+              Tools
+            </Link>
           </ul>
           <div className="flex space-x-12 ml-28">
-            <User />
+            <Link href="/account">
+              <User />
+            </Link>
             <Search />
             <LoveIcon />
             <Link href="/cart">

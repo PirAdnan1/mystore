@@ -21,6 +21,7 @@ module.exports = {
         "Shopbanner": "url(/images/ShopBanner.png)",
         "ContactBanner": "url(/images/contact.png)",
         "CartBanner": "url(/images/CartBanner.png)",
+        "AccountBanner": "url(/images/Account.png)",
       })
     },
   },
