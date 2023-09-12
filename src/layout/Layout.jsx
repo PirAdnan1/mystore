@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 function Layout({ children }) {
   return (
     <div>
-      <div className="hidden lg:block">
+      <div className="">
         <Navbar />
       </div>
       <main>{children}</main>
