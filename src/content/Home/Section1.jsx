@@ -7,7 +7,6 @@ import Container from "@/components/Container";
 
 // assets
 import Setting from "@/assets/Setting.png";
-import OilImage from "@/assets/Oil.png";
 
 function Section1() {
   return (
@@ -15,7 +14,7 @@ function Section1() {
     <Container>
       <div className="flex flex-col lg:flex-row justify-center items-center space-y-9 lg:space-y-0 md:space-x-52 py-12 px-8">
         <div>
-          <Image src={OilImage} />
+          {/* <Image src={OilImage} /> */}
           <p className="text-xl font-semibold mb-2">Lubricants</p>
           <Link href="#" className="border-b-2 text-lg border-black pb-1">
             View More
