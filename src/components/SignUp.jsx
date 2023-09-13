@@ -2,48 +2,23 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
+import { useAuth } from "@/context/authContext";
+
 const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [username, setUserName] = useState();
   const router = useRouter();
+  const { signUp } = useAuth();
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    username: "",
-    firstname: "",
-    lastname: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("https://fakestoreapi.com/users", {
-      method: "POST",
-      body: JSON.stringify({
-        email: formData.email,
-        username: formData.username,
-        password: formData.password,
-
-        name: {
-          firstname: formData.firstname,
-          lastname: formData.lastname,
-        },
-      }),
-    });
-
-    // const data = await response.json();
-    if (response.ok) {
+    try {
+      await signUp(email, password);
       router.push("/signin");
-    } else {
-      console.log("Login error");
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -51,7 +26,7 @@ const Signup = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-96">
         <h1 className="text-2xl font-semibold mb-4">Sign Up</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSignUp}>
           <div className="mb-4">
             <label className="block text-gray-600 text-sm font-medium mb-1">
               User Name
@@ -59,13 +34,13 @@ const Signup = () => {
             <input
               type="text"
               name="username"
-              value={formData.username}
-              onChange={handleChange}
+              value={username}
+              onChange={(e) => setUserName(e.target.value)}
               className="w-full border rounded-md px-3 py-2"
               required
             />
           </div>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label className="block text-gray-600 text-sm font-medium mb-1">
               First Name
             </label>
@@ -90,7 +65,7 @@ const Signup = () => {
               className="w-full border rounded-md px-3 py-2"
               required
             />
-          </div>
+          </div> */}
 
           <div className="mb-4">
             <label className="block text-gray-600 text-sm font-medium mb-1">
@@ -99,8 +74,8 @@ const Signup = () => {
             <input
               type="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full border rounded-md px-3 py-2"
               required
             />
@@ -112,8 +87,8 @@ const Signup = () => {
             <input
               type="password"
               name="password"
-              value={formData.password}
-              onChange={handleChange}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="w-full border rounded-md px-3 py-2"
               required
             />
