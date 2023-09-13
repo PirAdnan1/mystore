@@ -1,9 +1,38 @@
 import Head from 'next/head'
 
+//firebase
+import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import firebase from '../lib/firebase';
+
 // components
 import HomeContents from '@/content/Home'
 
 export default function Home({ products }) {
+
+  const auth = getAuth(firebase);
+  const db = getFirestore(firebase);
+
+  const signInWithGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      // User signed in successfully
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const addDataToFirestore = async () => {
+    try {
+      const docRef = await addDoc(collection(db, 'yourCollection'), {
+        someField: 'someValue',
+      });
+      console.log('Document written with ID: ', docRef.id);
+    } catch (error) {
+      console.error('Error adding document: ', error);
+    }
+  };
 
   return (
     <>
@@ -13,6 +42,11 @@ export default function Home({ products }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* <div>
+        <h1>Next.js + Firebase</h1>
+        <button onClick={signInWithGoogle}>Sign in with Google</button>
+        <button onClick={addDataToFirestore}>Add Data to Firestore</button>
+      </div> */}
 
       <HomeContents products={products} />
     </>
