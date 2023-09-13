@@ -5,13 +5,6 @@ import { useState } from "react";
 
 // components
 import AddtoCart from "./AddtoCart";
-
-// assest
-import TireImage from "@/assets/TireFour.png";
-import TireOne from "@/assets/TireOne.png";
-import TireTwo from "@/assets/TireTwo.png";
-import TireThree from "@/assets/TireThree.png";
-import TireOnes from "@/assets/TireOne.png";
 import ProductInfo from "./ProductInfo";
 
 function ProductHeader({ products }) {
@@ -40,36 +33,36 @@ function ProductHeader({ products }) {
         <span className="mr-6 text-lg font-bold">{">"}</span>
         <div className="w-0.5 h-6 bg-black mr-9"></div>
 
-        <span>{products.category}</span>
+        <span>{products?.category}</span>
       </div>
 
       <div className="flex flex-col lg:flex-row items-start mt-16 md:ml-24 px-3 md:space-x-24">
         <div className="flex items-center shrink-0 space-x-7">
-          <div className="space-y-8">
+          <div className="space-y-4">
             <Image
               alt="product"
               className="bg-[#e6e6e6] flex justify-center items-center rounded-lg"
-              src={products.image}
+              src={products?.image}
               width={86}
               height={86}
             />
             <Image
               className="bg-[#e6e6e6] flex justify-center items-center rounded-lg"
-              src={products.image}
+              src={products?.image}
               width={86}
               height={86}
               alt="product"
             />
             <Image
               className="bg-[#e6e6e6] flex justify-center items-center rounded-lg"
-              src={products.image}
+              src={products?.image}
               width={86}
               height={86}
               alt="product"
             />
             <Image
               className="bg-specialOne flex justify-center items-center rounded-lg"
-              src={products.image}
+              src={products?.image}
               width={86}
               height={86}
               alt="product"
@@ -78,7 +71,7 @@ function ProductHeader({ products }) {
           <div className="flex items-center justify-center w-full max-w-[423px] max-h-[500px] h-full">
             <Image
               className="object-cover"
-              src={products.image}
+              src={products?.image}
               width={280}
               height={280}
               alt="mainimg"
@@ -87,17 +80,17 @@ function ProductHeader({ products }) {
         </div>
 
         <div>
-          <h1 className="text-[42px] font-normal">{products.title}</h1>
-          <p className="text-[#9F9F9F] text-2xl">{products.price}</p>
+          <h1 className="text-[42px] font-normal">{products?.title}</h1>
+          <p className="text-[#9F9F9F] text-2xl">{products?.price}</p>
           <div className="flex items-center mt-4">
-            <span className="text-black">Shope: {products.category}</span>
+            <span className="text-black">Shope: {products?.category}</span>
             <div className="w-0.5 h-6 bg-[#9F9F9F] mr-3 ml-2" />
             <span className="text-[#9F9F9F] text-xs">
-              Rating : {products.rating.rate}{" "}
+              Rating : {products?.rating.rate}{" "}
             </span>
           </div>
           <p className="text-[13px] max-w-[424px] mt-3">
-            {products.description}
+            {products?.description}
           </p>
           <span className="my-3 text-[#9F9F9F]">Size</span>
           <div className="flex items-center space-x-4">

@@ -25,22 +25,32 @@ function Navbar() {
           <Link href="/">
             <Logo />
           </Link>
-          <ul className="md:flex space-x-12 hidden  lg:block">
-            <Link href="/">Home</Link>
-            <Link href="/shop">Shop</Link>
-            <Link href="#">About</Link>
-            <Link href="#">Contact</Link>
-            <Link href="#">Tools</Link>
+          <ul className="flex space-x-12 ">
+            <Link href="/" className="hover:text-primary">
+              Home
+            </Link>
+            <Link href="/shop" className="hover:text-primary">
+              Shop
+            </Link>
+            <Link href="#" className="hover:text-primary">
+              About
+            </Link>
+            <Link href="/contact" className="hover:text-primary">
+              Contact
+            </Link>
+            <Link href="#" className="hover:text-primary">
+              Tools
+            </Link>
           </ul>
-          <div className="flex w-full items-center justify-center md:space-x-12 md:ml-28">
-            {/* <div className="md:flex hidden lg:block"> */}
-            <User />
-            <LoveIcon />
+          <div className="flex space-x-12 ml-28">
+            <Link href="/account">
+              <User />
+            </Link>
             <Search />
-            {/* </div> */}
-            {/* <span onClick={handleChange}> */}
-            <AddtoCard />
-            {/* </span> */}
+            <LoveIcon />
+            <Link href="/cart">
+              <AddtoCard />
+            </Link>
           </div>
         </div>
         {show && (

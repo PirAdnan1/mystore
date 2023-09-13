@@ -1,9 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-// assest
-import TireImage1 from "@/assets/TireThree.png";
-import TireImage2 from "@/assets/TireOne.png";
 
 function ProdDescription({ products }) {
   return (
@@ -16,19 +13,19 @@ function ProdDescription({ products }) {
         <h1 className="text-[#9F9F9F] text-lg md:text-2xl">Reviews [5]</h1>
       </div>
       <p className="text-[#9F9F9F] text-base px-2 md:px-0 leading-normal font-normal max-w-[1026px] text-center mx-auto mt-11">
-        {products.description}
+        {products?.description}
       </p>
       <div className="flex flex-col md:flex-row gap-4 mt-11 items-center justify-center">
         <Image
           className="bg-[#e6e6e6] rounded-lg  object-fill "
-          src={products.image}
+          src={products?.image}
           width={350}
           height={350}
           alt="descriptionimage"
         />
         <Image
           className="bg-[#e6e6e6] rounded-lg  "
-          src={products.image}
+          src={products?.image}
           width={350}
           height={350}
           alt="descriptionimage"
