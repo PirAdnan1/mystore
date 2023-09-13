@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 
 // assest
 import Logo from '@/assets/Logo'
