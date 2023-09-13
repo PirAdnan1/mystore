@@ -9,9 +9,11 @@ export default function useIsMobile(screenSize = 640) {
   let [isMobile, setIsMobile] = useState(false);
 
   const windowResizeHandler = (event) => {
+    console.log(window.innerWidth, screenSize)
     if (window.innerWidth <= screenSize) setIsMobile(true);
     else setIsMobile(false);
   };
+
 
   useEffect(() => {
     windowResizeHandler();

@@ -1,4 +1,5 @@
-// hooks
+import React from "react";
+import Link from "next/link";
 import { useState } from "react";
 
 // util
@@ -6,7 +7,6 @@ import clsx from "clsx";
 
 // components
 import Container from "./Container";
-import Link from "next/link";
 
 // hooks
 import useIsMobile from "@/hooks/useIsMobile";
@@ -24,20 +24,24 @@ export default function Navbar() {
   const isMobile = useIsMobile(1024);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+
   return (
-    <div className="bg-special">
+    <div className="bg-special py-9">
       <Container>
-        <div className="flex justify-between items-center  py-7 px-4">
+        <div className="flex justify-between items-center">
           <Link href="/">
             <Logo />
           </Link>
-          <div className="flex gap-4">
+          <div className="flex gap-2">
             <div className="lg:hidden">
+              <Link href="/cart">
+              
               <AddtoCard />
+              </Link>
             </div>
             <button
               onClick={() => setIsMenuOpen(true)}
-              className={clsx("pb-4 text-primary", {
+              className={clsx("mr-1 text-primary", {
                 hidden: !isMobile,
               })}
             >
@@ -66,7 +70,7 @@ export default function Navbar() {
                   hidden: !isMobile,
                 })}
               >
-                <Logo className="text-xs pl-2" />
+                <Logo className="text-xs" />
                 <button
                   onClick={() => setIsMenuOpen(false)}
                   className="pb-4 pr-4 text-primary transition-colors hover:text-cool-grey-800"
