@@ -22,7 +22,7 @@ function Section2({ products }) {
           products.
         </p>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 justify-items-center items-center space-y-8 gap-0 pt-24 px-8 mb-16">
-          {products.slice(0, visibleProducts).map((product, index) => {
+          {products?.slice(0, visibleProducts)?.map((product, index) => {
             return (
               <div className="text-base text-left " key={index}>
                 <Image
@@ -43,7 +43,7 @@ function Section2({ products }) {
         </div>
         {show && (
           <div className="grid lg:grid-cols-4 justify-items-center items-center space-y-8 gap-0 pt-24 px-8 mb-16">
-            {products.slice(8, 20).map((product, index) => {
+            {products?.slice(8, 20)?.map((product, index) => {
               return (
                 <div className="text-base text-left " key={index}>
                   <Image
